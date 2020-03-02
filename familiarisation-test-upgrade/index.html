@@ -105,6 +105,41 @@
 .has-error {
     border-color: red !important;
 }
+#resultsblock {
+    border-radius: 5px;
+    box-shadow: 0 2px 13px 8px rgba(148,149,150,.34);
+}
+.percentage img {
+    margin: 15px 15px 15px 0;
+    height: 2em;
+    display: inline;
+}
+#courseline {
+    margin-bottom: 0 !important;
+}
+
+#ielts-results-courses {
+    margin-top: 0 !important;
+}
+@media only screen and (max-width: 768px) {
+    .percentage {
+        background-image: url(../wp-content/uploads/2020/03/Mob_Arrow.svg) !important; 
+        margin-right: 0 !important;
+        background-position: center !important;
+        padding-left: 0px;]
+
+    }
+    .readingscore {
+        text-align: center;
+    }
+    .listeningscore {
+        text-align: center;
+        margin-bottom: 15px !important;
+    }
+    .scoretitle {
+        text-align: center;
+    }
+}
 </style>
 </head>
 <body class="page-template-default page page-id-9608 woocommerce-no-js wpb-js-composer js-comp-ver-5.0.1 vc_responsive currency-gbp">
@@ -143,7 +178,6 @@
                 padding-top: 50vh;
             }
         </style>
-<img style="width: 100%; height: 40vh; position: absolute; filter: brightness(50%); object-fit: cover;" src="../wp-content/themes/gel-v2/img/default-masthead.jpg" />
 <div class="wrap">
 <div id="primary" class="content-area">
 <main id="main" class="site-main" role="main">
@@ -159,22 +193,70 @@
 </div>
 <div class="container">
 <div class="entry-content">
+<div id="resultsblock" class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_text_column wpb_content_element ">
+<div class="wpb_wrapper">
+<h2 style="color: #565656; text-align: center; font-weight: bold;">See where you are in the chart</h2>
+</div>
+</div>
+<div class="wpb_raw_code wpb_content_element wpb_raw_html">
+<div class="wpb_wrapper">
+<div class="row score pt-4 pb-4" style="margin-right: 10px; margin-left: 10px;">
+<div class="col-12 col-lg-6 align-items-bottom">
+<div class="row">
+<div class="col">
+<p class="scoretitle" style="font-weight: bold; color: #007fa3; font-size: large;">Your Results</p>
+</div>
+</div>
+<div class="row percentage" style="background-image: url(../wp-content/uploads/2020/03/Web_Arrow.svg); background-repeat: no-repeat; background-size: cover; margin-right: 20%; background-position: right; padding-top: 10px; padding-left: 15px;">
+<div class="row readingscore" style="margin: 0">
+<div class="col-lg-6">
+<p style="font-size: 1.3em;"><img src="https://cdielts.gelielts.cn/img/Reading.svg" alt="Reading"> <strong>Reading <span class="score reading-percent">1</span>%</strong></p>
+</div>
+</div>
+<div class="row listeningscore" style="margin: 0">
+<div class="col-lg-6">
+<p style="font-size: 1.3em;"><img src="https://cdielts.gelielts.cn/img/Headphones.svg" alt="Listening"> <strong>Listening <span class="score listening-percent">1</span>%</strong></p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-12 col-lg-6 image">
+<img style="max-height: 200px;" src="https://cdielts.gelielts.cn/img/graph_new.svg" alt="IELTS graph">
+</div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+<div id="courseline" class="vc_row wpb_row vc_row-fluid vc_custom_1583148446290"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_text_column wpb_content_element ">
+<div class="wpb_wrapper">
+<h2 style="color: #565656; text-align: center; font-weight: bold;">Choose your package to get the best IELTS score</h2>
+</div>
+</div>
+</div></div></div></div>
 <div id="ielts-results-courses" class="vc_row wpb_row vc_row-fluid vc_row-o-equal-height vc_row-flex"><div class="course-column wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper">
 <div class="wpb_text_column wpb_content_element  head-description">
 <div class="wpb_wrapper">
-<p>Familiarise</p>
+<table style="line-height: 25px; width: 100%;">
+<tbody>
+<tr>
+<td style="padding: 10px; height: 75px; width: 75px; max-width: 100px;"><img style="height: 40px; width: 40px; max-width: 100px;" src="../wp-content/uploads/2020/03/1.png" align="absmiddle"></td>
+<td style="text-align: left;">IELTS Band Scores and Feedback</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="wpb_raw_code wpb_content_element wpb_raw_html price">
 <div class="wpb_wrapper">
-<p>You’ve seen the test, now
-review your answers</p>
-<h3 class="price-title align-price"><span class="woocs_price_code" data-product-id="7355"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&pound;</span>0.99</span></span></h3>
+<p>See predicted IELTS score for Reading and Listening</p>
+<h3 class="price-title align-price"><span class="woocs_price_code" data-product-id="7355"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&pound;</span><span id="price1">0.99</span></span></span></h3>
 </div>
 </div>
 <div class="wpb_raw_code wpb_content_element wpb_raw_html buy-now">
 <div class="wpb_wrapper">
-<a id="buy1" class="buy" title="">BUY NOW</a>
+<a id="buy1" class="buy" title="">Practice</a>
 </div>
 </div>
 <div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_90 vc_sep_pos_align_center vc_separator_no_text vc_sep_color_grey"><span class="vc_sep_holder vc_sep_holder_l"><span class="vc_sep_line"></span></span><span class="vc_sep_holder vc_sep_holder_r"><span class="vc_sep_line"></span></span>
@@ -182,78 +264,121 @@ review your answers</p>
 <div class="wpb_raw_code wpb_content_element wpb_raw_html">
 <div class="wpb_wrapper">
 <ul class="features">
-<li><p>Get all of the answers. See what you got right and wrong.</p></li>
-<li><p>Improve your Reading and Listening with explanations on every answer</p></li>
-<li><p>Finish or re-do your test</p></li>
+<li><p>Predicted IELTS scores for Reading and Listening</p></li>
+    <li><p>See all of the answers - what you got right and wrong</p></li>
+    <li><p>Explanations for every Reading and Listening answer</p></li>
+    <li><p>Review your Writing</p></li>
+    <li><p>Retake your test</p></li>
 </ul>
 </div>
 </div>
 </div></div></div><div class="course-column wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper">
 <div class="wpb_text_column wpb_content_element  head-description">
 <div class="wpb_wrapper">
-<p>Familiarise and Check</p>
+<table style="line-height: 25px; width: 100%;">
+<tbody>
+<tr>
+<td style="padding: 10px; height: 75px; width: 75px; max-width: 100px;"><img style="height: 40px; width: 40px; max-width: 100px;" src="../wp-content/uploads/2020/03/2.png" align="absmiddle"></td>
+<td style="text-align: left;">1 Full Practice Test with Writing and Speaking</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="wpb_raw_code wpb_content_element wpb_raw_html price">
 <div class="wpb_wrapper">
-<p>with a full practice test including Writing and Speaking, and personal feedback
-from IELTS experts</p>
-<h3 class="price-title align-price"><span class="woocs_price_code" data-product-id="7360"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&pound;</span>34.99</span></span></h3>
+<p>Includes Speaking and Writing with scores and personal feedback by a native English-speaking IELTS expert</p>
+<h3 class="price-title align-price"><span class="woocs_price_code" data-product-id="7360"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&pound;</span><span id="price2">34.99</span></span></span></h3>
 </div>
 </div>
 <div class="wpb_raw_code wpb_content_element wpb_raw_html buy-now">
 <div class="wpb_wrapper">
-<a id="buy2" class="buy" title="">BUY NOW</a>
+<a id="buy2" class="buy" title="">Practice</a>
 </div>
 </div>
 <div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_90 vc_sep_pos_align_center vc_separator_no_text vc_sep_color_grey"><span class="vc_sep_holder vc_sep_holder_l"><span class="vc_sep_line"></span></span><span class="vc_sep_holder vc_sep_holder_r"><span class="vc_sep_line"></span></span>
 </div>
 <div class="wpb_raw_code wpb_content_element wpb_raw_html">
 <div class="wpb_wrapper">
-<p class="features-desc">Everything from <strong>Familiarise</strong>
+<p class="features-desc">Everything from <strong>Scores and Feedback</strong>
 <ul class="features">
-<li class="plus"><p>Plus</p></li>
-<li><p>A full IELTS practice test</p></li>
-<li><p>Scores and feedback on Writing and Speaking by IELTS experts</p></li>
-<li><p>Learn from our experts with videos and lessons on IELTS strategy</p></li>
+    <li class="plus"><p>Plus</p></li>
+    <li><p>A full practice test including Writing and Speaking</p></li>
+    <li><p>Predicted IELTS band scores</p></li>
+    <li><p>Personal feedback by our native English-speaking IELTS experts for Speaking and Writing</p></li>
+   <li><p>Explanations for every Reading and Listening answer</p></li>
+    <li><p>Retake your test</p></li>
 </ul>
 </div>
 </div>
 </div></div></div><div class="course-column wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper">
 <div class="wpb_text_column wpb_content_element  head-description">
 <div class="wpb_wrapper">
-<p>Familiarise, Check and Practice</p>
+<table style="line-height: 25px; width: 100%;">
+<tbody>
+<tr>
+<td style="padding: 10px; height: 75px; width: 75px; max-width: 100px;"><img style="height: 40px; width: 40px; max-width: 100px;" src="../wp-content/uploads/2020/03/3.png" align="absmiddle"></td>
+<td style="text-align: left;">1 Month<br>
+Full Preparation</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="wpb_raw_code wpb_content_element wpb_raw_html price">
 <div class="wpb_wrapper">
-<p>with 1 month access <br>to GEL IELTS</p>
-<h3 class="price-title align-price"><span class="woocs_price_code" data-product-id="7366"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&pound;</span>49.99</span></span></h3>
+<p>Unlimited access to GEL IELTS for 1 month, and 1 full IELTS practice test</p>
+<h3 class="price-title align-price"><span class="woocs_price_code" data-product-id="7366"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&pound;</span><span id="price3">49.99</span></span></span></h3>
 </div>
 </div>
 <div class="wpb_raw_code wpb_content_element wpb_raw_html buy-now">
 <div class="wpb_wrapper">
-<a id="buy3" class="buy" title="">BUY NOW</a>
+<a id="buy3" class="buy" title="">Practice</a>
 </div>
 </div>
 <div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_90 vc_sep_pos_align_center vc_separator_no_text vc_sep_color_grey"><span class="vc_sep_holder vc_sep_holder_l"><span class="vc_sep_line"></span></span><span class="vc_sep_holder vc_sep_holder_r"><span class="vc_sep_line"></span></span>
 </div>
 <div class="wpb_raw_code wpb_content_element wpb_raw_html">
 <div class="wpb_wrapper">
-<p class="features-desc">Everything from <strong>Familiarise and Check</strong>
+<p class="features-desc">Everything from <strong>1 Full Practice Test</strong>
 <ul class="features">
-<li class="plus"><p>Plus</p></li>
+    <li class="plus"><p>Plus</p></li>
+<li><p>Access IELTS experts on messaging</p></li>
+<li><p>Video lessons on test strategy and technique</p></li>
 <li><p>Practice as much as you need to with up to 40 tests available</p></li>
-<li><p>Save time using Guided mode. Practice only what you need based on your Check results</p></li>
+<li><p>Fast practice using Guided mode - practice only what you need based on your previous results</p><p></p></li>
 <li><p>Get the best writing score with our Writing Trainer and Model Answer Library</p></li>
-<li><p>Ace Speaking with video tests</p></li>
+<li><p>Get ready for Speaking with our video tests</p></li>
 </ul>
 </div>
 </div>
 </div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper">
 <div class="wpb_raw_code wpb_raw_js">
 <div class="wpb_wrapper">
+<script type="text/javascript">
+jQuery(function() {
+var urlParams = new URLSearchParams(window.location.search);
+var tokens = urlParams.get('token');
 
+
+if (tokens !== undefined && tokens !== 'undefined' && tokens !== "") {
+    var scores = atob(tokens);
+
+    if (scores) {
+        function round(value, precision) {
+            var multiplier = Math.pow(10, precision || 0);
+            return Math.round(value * multiplier) / multiplier;
+        }
+
+        scores = JSON.parse(scores);
+        jQuery(".reading-percent").text(Math.round(scores.r));
+        jQuery(".listening-percent").text(Math.round(scores.l));
+    } else {
+        jQuery('#resultsblock').hide();
+    }
+}
+});
+</script>
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){

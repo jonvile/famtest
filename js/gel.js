@@ -1,5 +1,16 @@
 var timeoutCounter = 0;
 jQuery(function() {
+    jQuery.ajax({
+        type: "GET",
+        url: 'https://api.gelielts.cn/ielts/test-centre/upgrades/prices/87357',
+        success: function (result) {
+        console.log(result);
+            jQuery('#price1').html(result[0].prices.CNY);
+            jQuery('#price2').html(result[1].prices.CNY);
+            jQuery('#price3').html(result[2].prices.CNY);
+            jQuery('.woocommerce-Price-currencySymbol').html('¥');
+        }
+    });
     jQuery('.buy').on('click', function() {
         jQuery('#purchase_wrapper').fadeIn();
         product_id = jQuery(this).attr('id').slice(-1);
@@ -68,7 +79,7 @@ function doAjax() {
     }
     request = jQuery.ajax({
         type: "GET",
-        url: 'https://cdielts.gelielts.cn/fusion',
+        url: 'http://learn.jon.gel:81/fusion',
         data: { action: "buy", product:  product_id},
         xhrFields: { withCredentials: true },
         success: function (result) {
@@ -82,13 +93,16 @@ function doAjax() {
             jQuery('.step3').fadeOut('400','swing', function() {
                 jQuery('.step4').fadeIn();
             });
+            var dataArr =  { action: "check", firstname: firstname, lastname: lastname, email: email };
+            console.log(dataArr);
             jQuery.ajax({
-                url: 'https://cdielts.gelielts.cn/fusion',
-                data: { action: "check", firstname: firstname, lastname: lastname, email: email },
+                url: 'http://learn.jon.gel:81/fusion',
+                data: dataArr,
                 dataType: 'json',
                 xhrFields: { withCredentials: true },
                 type: 'GET',
                 success: function(data) { 
+                console.log(data);
                     switch (data) {
                         case "TIMEOUT":
                             jQuery('.step4').fadeOut('400','swing', function() {
@@ -110,7 +124,9 @@ function doAjax() {
                             break;
                     }
                 },
-                error: function() {
+                error: function(jqXHR, status, errorThrown) {
+                console.log(status);
+                console.log(errorThrown);
                     if (status != "progStopped") {
                         jQuery('.step4').fadeOut('400','swing', function() {
                             jQuery('.timeout').fadeIn();
@@ -120,6 +136,8 @@ function doAjax() {
             });
         },
         error: function(jqXHR, status, errorThrown) {
+                        console.log(status);
+                console.log(errorThrown);
             if (status != "progStopped") {
                 jQuery('.step3').css("display","none");
                 jQuery('.apierror').fadeIn();
@@ -129,7 +147,6 @@ function doAjax() {
     });
 }
 function isValid(el) {
-console.log(el.attr);
     switch (el.attr('type')) {
         case 'text':
         case 'textarea':
@@ -154,4 +171,25 @@ function validateInput(el) {
             el.addClass('has-error');
         }
 }
-        
+jQuery(function() {
+    var urlParams = new URLSearchParams(window.location.search);
+    var token = urlParams.get('token');
+    if (token !== undefined && token !== 'undefined' && token !== "") {
+        var scores = atob(token);
+
+        if (scores) {
+            function round(value, precision) {
+                var multiplier = Math.pow(10, precision || 0);
+                return Math.round(value * multiplier) / multiplier;
+            }
+
+            scores = JSON.parse(scores);
+            jQuery(".reading-percent").text(Math.round(scores.r));
+            jQuery(".listening-percent").text(Math.round(scores.l));
+        } else {
+            jQuery('#resultsblock').hide();
+        }
+    } else {
+        jQuery('#resultsblock').hide();
+    }
+});   

@@ -79,7 +79,7 @@ function doAjax() {
     }
     request = jQuery.ajax({
         type: "GET",
-        url: 'http://learn.jon.gel:81/fusion',
+        url: 'http://cdielts.gelielts.cn/fusion',
         data: { action: "buy", product:  product_id},
         xhrFields: { withCredentials: true },
         success: function (result) {
@@ -96,7 +96,7 @@ function doAjax() {
             var dataArr =  { action: "check", firstname: firstname, lastname: lastname, email: email };
             console.log(dataArr);
             jQuery.ajax({
-                url: 'http://learn.jon.gel:81/fusion',
+                url: 'http://cdielts.gelielts.cn/fusion',
                 data: dataArr,
                 dataType: 'json',
                 xhrFields: { withCredentials: true },

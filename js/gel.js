@@ -79,7 +79,7 @@ function doAjax() {
     }
     request = jQuery.ajax({
         type: "GET",
-        url: 'http://cdielts.gelielts.cn/fusion',
+        url: 'https://cdielts.gelielts.cn/fusion',
         data: { action: "buy", product:  product_id},
         xhrFields: { withCredentials: true },
         success: function (result) {
@@ -93,10 +93,10 @@ function doAjax() {
             jQuery('.step3').fadeOut('400','swing', function() {
                 jQuery('.step4').fadeIn();
             });
-            var dataArr =  { action: "check", firstname: firstname, lastname: lastname, email: email };
+            var dataArr =  { action: "check", firstname: firstname, lastname: lastname, email: email, product: product_id };
             console.log(dataArr);
             jQuery.ajax({
-                url: 'http://cdielts.gelielts.cn/fusion',
+                url: 'https://cdielts.gelielts.cn/fusion',
                 data: dataArr,
                 dataType: 'json',
                 xhrFields: { withCredentials: true },

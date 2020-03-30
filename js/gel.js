@@ -31,6 +31,16 @@ jQuery(function() {
             jQuery('.step1').fadeIn();
         });
     });
+    jQuery('#purchaseClose').on('click', function() {
+        jQuery('#purchase_wrapper').fadeOut('400','swing', function() {
+            if (request != null) {
+                request.abort("progStopped");
+                request = null;
+            }
+            jQuery('.purchase').fadeOut();
+            jQuery('.step1').fadeIn();
+        });
+    });
     jQuery('#timeoutnext').on('click', function() {
         jQuery('.timeout').fadeOut('400','swing', function() {
             jQuery('.step3').fadeIn('400','swing', function() {

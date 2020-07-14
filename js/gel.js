@@ -125,6 +125,24 @@ function doAjax() {
                                 jQuery('.support').fadeIn();
                             });
                             break;
+                        case "ERROR 3":
+                            //generating user error
+                            jQuery('.step4').fadeOut('400','swing', function() {
+                                jQuery('.support3').fadeIn();
+                            });
+                            break;
+                        case "ERROR 4":
+                            //generating user error
+                            jQuery('.step4').fadeOut('400','swing', function() {
+                                jQuery('.support4').fadeIn();
+                            });
+                            break;
+                        case "ERROR 5":
+                            //generating user error
+                            jQuery('.step4').fadeOut('400','swing', function() {
+                                jQuery('.support5').fadeIn();
+                            });
+                            break;
                         default:
                             jQuery('#startlink').attr('href',data);
                             jQuery('#emailSpan').text(email);

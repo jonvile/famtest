@@ -201,23 +201,26 @@ function validateInput(el) {
 }
 jQuery(function() {
     var urlParams = new URLSearchParams(window.location.search);
-    var token = urlParams.get('token');
-    if (token !== undefined && token !== 'undefined' && token !== "") {
-        var scores = atob(token);
+        var token = urlParams.get('token');
+        console.log(token)
+        if (token == "{TOKEN}") {
+            jQuery('#resultsblock').hide();
+        } else if (token != null) {
+            var scores = atob(token);
 
-        if (scores) {
-            function round(value, precision) {
-                var multiplier = Math.pow(10, precision || 0);
-                return Math.round(value * multiplier) / multiplier;
+            if (scores) {
+                function round(value, precision) {
+                    var multiplier = Math.pow(10, precision || 0);
+                    return Math.round(value * multiplier) / multiplier;
+                }
+
+                scores = JSON.parse(scores);
+                jQuery(".reading-percent").text(Math.round(scores.r));
+                jQuery(".listening-percent").text(Math.round(scores.l));
+            } else {
+                jQuery('#resultsblock').hide();
             }
-
-            scores = JSON.parse(scores);
-            jQuery(".reading-percent").text(Math.round(scores.r));
-            jQuery(".listening-percent").text(Math.round(scores.l));
         } else {
             jQuery('#resultsblock').hide();
         }
-    } else {
-        jQuery('#resultsblock').hide();
-    }
 });   
